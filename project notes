@@ -1,0 +1,18 @@
+to start a project: 
+-- composer global require laravel/installer
+-- laravel new laragigproject
+-- cd laragigproject
+-- php artisan serve
+
+<!-- =========ROUTING============ -->
+- We change our routing  inside the routes folder
+- the specific file is web.php
+- to use blade, we must give the file a name filename.blade.php
+- inside web.php, under route, view, we only specify the name of the file. we dont add blade.php. 
+- 
+<!-- use of directives -->
+- directives start with @ symbol. 
+- used instead of having php tags all over
+
+<!-- MODELS  -->
+- Models are found inside app folder
