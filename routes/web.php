@@ -19,6 +19,7 @@ Route::get('welcome/', function () {
     return view('welcome');
 });
 
+
 Route::get('/', function(){
     return view('listings');
 });
@@ -27,7 +28,7 @@ Route::get('/', function(){
 
 // all listings
 Route::get('/', function (){
-    return view('listgigs', [
+    return view('listings', [
         'heading' => 'Latest Listings',
         // 'listings' => [
         //     [
@@ -54,7 +55,7 @@ Route::get('/', function (){
 Route::get('/listings/{id}', function($id){
     return view('listing',[
         'heading' => "Latest Heading",
-        'listings' => Listing::find($id)
+        'listing' => Listing::find($id)
 
     ] );
 });
