@@ -29,6 +29,7 @@
   <nav class="flex justify-between items-center mb-4">
     <a href="/"><img class="w-24" src="{{asset('images/logo.png')}}" alt="" class="logo" /></a>
     <ul class="flex space-x-6 mr-6 text-lg">
+     {{-- decide what to display depending on whether user is logged in or not --}}
       @auth
       <li>
         <span class="font-bold uppercase">
@@ -36,7 +37,7 @@
         </span>
       </li>
       <li>
-        <a href="/listings/manage" class="hover:text-laravel"><i class="fa-solid fa-gear"></i> Manage Listings</a>
+        <a href="/listing/manage" class="hover:text-laravel"><i class="fa-solid fa-gear"></i> Manage Listings</a>
       </li>
       <li>
         <form class="inline" method="POST" action="/logout">
@@ -56,7 +57,7 @@
       @endauth
     </ul>
   </nav>
-
+  <x-flashmessage />
   <main>
     {{$slot}}
   </main>

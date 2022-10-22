@@ -25,8 +25,7 @@
 </head
 <body>
    
-    <h1>LARAGIGS</h1>
-    VIEW OUTPUT 
+    <x-flashmessage />
      @yield('content')
     
     <footer

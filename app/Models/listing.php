@@ -9,7 +9,7 @@ class Listing extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['title', 'company', 'location', 'website', 'email', 'description', 'tags'];
+    protected $fillable = ['title', 'company', 'location', 'website', 'email', 'description', 'tags','user_id'];
 
 
     public function scopeFilter($query, array $filters)
@@ -26,5 +26,11 @@ class Listing extends Model
             ;
         }
         
+    }
+
+    //Relationship To User
+    public function user() {
+        return $this->belongsTo(User::class, 'user_id');
+
     }
 }
